@@ -1,6 +1,6 @@
-# link: https://neetcode.io/problems/binary-search/question?list=neetcode250
+# link: https://neetcode.io/problems/search-insert-position/question?list=neetcode250
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+    def searchInsert(self, nums: List[int], target: int) -> int:
         l, r = 0,len(nums)-1
         while l <=r:
             m = int((l+r)/2)
@@ -9,6 +9,6 @@ class Solution:
             elif nums[m] > target:
                 r = m-1 
             else:
-                l=m+1 
-        return -1
+                l=m+1
+        return l
         
